@@ -1,0 +1,91 @@
+/* frontend/src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App-wide dark theme polish + reusable UI classes */
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+  }
+}
+
+@layer components {
+  /* Typography helpers */
+  .muted {
+    @apply text-slate-400;
+  }
+
+  /* Cards / sections */
+  .card {
+    @apply rounded-2xl border border-slate-800 bg-slate-900/40 shadow-sm;
+  }
+
+  .card-pad {
+    @apply p-6;
+  }
+
+  /* Labels */
+  .label {
+    @apply mb-1 block text-sm font-medium text-slate-300;
+  }
+
+  /* Inputs: readable text + dynamic focus + subtle hover */
+  .input {
+    @apply w-full rounded-xl border border-slate-800 bg-slate-950/40 px-4 py-3
+      text-slate-100 placeholder:text-slate-500
+      outline-none transition
+      hover:border-slate-700
+      focus:border-slate-500 focus:ring-2 focus:ring-slate-700/60;
+  }
+
+  /* Textareas */
+  .textarea {
+    @apply input min-h-[96px] resize-none;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-4 py-2
+      border border-slate-800 bg-slate-900/50 text-slate-100
+      hover:bg-slate-900/80 transition active:scale-[0.99];
+  }
+
+  /* Primary button (light) for strong CTAs */
+  .btn-primary {
+    @apply border-slate-200 bg-slate-100 text-slate-950 hover:bg-white;
+  }
+
+  /* Danger button (optional) */
+  .btn-danger {
+    @apply border-red-900/50 bg-red-950/40 text-red-100 hover:bg-red-950/70;
+  }
+
+  /* Small pill/badge */
+  .badge {
+    @apply inline-flex items-center rounded-full border border-slate-800 bg-slate-950/40 px-2.5 py-1
+      text-xs text-slate-300;
+  }
+
+  /* List row (transactions, category totals, etc.) */
+  .row {
+    @apply flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/40 px-4 py-2;
+  }
+
+  /* Inline error box */
+  .error {
+    @apply rounded-xl border border-red-900/40 bg-red-950/30 p-3 text-sm text-red-200;
+  }
+
+  /* Inline success box (optional) */
+  .success {
+    @apply rounded-xl border border-emerald-900/40 bg-emerald-950/30 p-3 text-sm text-emerald-200;
+  }
+}
