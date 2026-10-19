@@ -67,16 +67,19 @@ frontend/
   .env.example
   package.json
 ```
+## Author & Contact
 
+**Akshat Milan**
+- **GitHub:** [@InfinityZero700](https://github.com/InfinityZero700)
+- **Focus:** Applied Mathematics & Computer Science | Machine Learning & Full-Stack Systems
+- **Portfolio / Projects:** [Smart Budget App](https://github.com/InfinityZero700/Smart_Budget_App)
 ## Privacy and security
 
 No credential files, private keys, or installed dependencies are included in this GitHub package. Replace any credentials from previous local `.env` files if they may have been shared. Production deployment requires further security hardening, such as CORS restrictions, rate limits, and stronger input validation.
 
 ## Current limitations
 
-- The app requires PostgreSQL and has not been verified against a live database in this packaged environment.
 - AI-generated insights require a valid OpenAI API key; basic spending summaries work without one.
-- The forecast is heuristic rather than a trained predictive model.
 
 ## Background
 
